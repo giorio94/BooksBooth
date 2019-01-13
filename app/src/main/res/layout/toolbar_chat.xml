@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/popup_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/toolbar_request_book_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/pt_ask_for_book"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_library_white_24dp"
+                android:gravity="center"
+                android:text="@string/ask_book"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/toolbar_accept_decline_request_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/pt_accept_decline_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/pt_accept"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_check_white_24dp"
+                    android:gravity="center"
+                    android:text="@string/accept"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/pt_decline"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_close_white_24dp"
+                    android:gravity="center"
+                    android:text="@string/decline"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/Button.Important" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/toolbar_return_book_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/pt_return_book"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_assignment_return_white_24dp"
+                android:gravity="center"
+                android:text="@string/return_book"
+                android:textColor="@android:color/primary_text_dark" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/toolbar_leave_feedback_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/pb_leave_feedback"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_star_white_24dp"
+                android:gravity="center"
+                android:text="@string/leave_feedback"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>
